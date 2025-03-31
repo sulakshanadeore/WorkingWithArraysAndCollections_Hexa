@@ -1,0 +1,15 @@
+﻿Collections
+------------
+
+
+Arrays: collection of similar datatypes.
+They are not dynamic in size, they are static in size.
+
+
+Collections in .net: 
+Collections is a framework in .net which has its own hierarchy of interfaces and classes.
+All Collections are dynamic in size.
+
+
+NonGenerics
+Generic
