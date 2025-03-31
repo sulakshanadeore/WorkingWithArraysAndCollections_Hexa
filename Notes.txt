@@ -10,6 +10,48 @@ Collections in .net:
 Collections is a framework in .net which has its own hierarchy of interfaces and classes.
 All Collections are dynamic in size.
 
+1) ICollection: provides basic functionalities for adding,removing and managing elements in the collection.
+Methods: Add(), Remove(), and  Count property
 
-NonGenerics
-Generic
+2) IEnumerable: gives a foreach loop
+Methods: GetEnumerator() which return IEnumerator for traversing the collection
+
+
+3) IComparer: provides a separate mechanism to compare objects of the same type, allowing for multiple sorting criterias
+or when you dont have control over the class implementation
+
+
+example: if a person class has name and age properties, and you want to compare age  of  two persons outside the class.
+In this case the Compare() is used which takes 2 parameters of  Person.
+
+
+4) IComparable: defines a defaultsort order for objects within the class itself. It has a CompareTo() 
+
+example: if a person class has name and age properties, and you want to compare names of two persons in the same 
+class again and again.
+
+
+5) IList: represents an ordered collection of elements which can be accessed by index.
+
+6) IDictionary: represents collection of key-value pairs, allowing access to the elements using a unique key
+
+            System.Collections																		System.Collections.Generic
+			    requires casting																	doesnot require casting
+				(these are not typesafe)															(these are typesafe)	
+          																									List<T>, where T is type---int,float,string,double,products,customer
+
+				NonGenerics									                                        Generic
+List			int,float,double,char,string,datetime,Products                                   It can only store one type of collection
+				The type of data that can be stored in NonGeneric collections
+				is of  a object type.
+					class ArrayList																	class List
+
+Dictionary/        class Hashtable																	class Dictionary
+HashTable
+
+
+Stack			 class Stack																		class Stack		
+
+Queue            class Queue																		class Queue 		
+
+																									class LinkedList
